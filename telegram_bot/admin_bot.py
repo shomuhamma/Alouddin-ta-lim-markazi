@@ -29,7 +29,7 @@ from telegram.ext import (
 logging.basicConfig(level=logging.INFO)
 
 # -------------------- CONFIG --------------------
-BOT_TOKEN = "8330411414:AAF8U0h-5au0ZY8MhhzYtRCgWWT53hoTyYQ"
+BOT_TOKEN = "8330411414:AAHIZ6RBt8DznaaNRTH_h3_QplRpkl1sjLg"
 
 # Admin Telegram ID lar ro'yxati
 ADMIN_IDS = {8330411414, 5490555893}
