@@ -91,7 +91,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
 
                   {/* Image */}
                   <img
-                    src="/assets/girl.png"
+                    src="/assets/bitiruvchi.png"
                     alt="Bitiruvchi talaba sertifikat bilan"
                     style={{
                       width: "100%",
