@@ -1,4 +1,5 @@
 import React from "react";
+import girlImg from "../assets/girl.png"; // ✅ Vite build'da ishonchli yo'l
 
 interface HeroProps {
   onOpenModal: () => void;
@@ -20,7 +21,6 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
 
       <div className="relative z-10 container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          
           {/* TEXT SECTION */}
           <div className="text-center lg:text-left order-2 lg:order-1">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-600 font-bold text-sm mb-6">
@@ -28,7 +28,8 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-[1.1] mb-6">
-              Kelajagingizni <span className="text-orange-500">bugun</span> boshlang
+              Kelajagingizni <span className="text-orange-500">bugun</span>{" "}
+              boshlang
             </h1>
 
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0 mb-10">
@@ -54,7 +55,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
             </div>
           </div>
 
-          {/* IMAGE SECTION — TO‘G‘RI JOY */}
+          {/* IMAGE SECTION */}
           <div className="relative order-1 lg:order-2 z-20">
             <div className="relative w-full max-w-[500px] mx-auto">
               {/* Glassmorphism Card */}
@@ -71,7 +72,8 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
                     backdropFilter: "blur(20px)",
                     WebkitBackdropFilter: "blur(20px)",
                     border: "1px solid rgba(255, 255, 255, 0.18)",
-                    boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37), 0 0 60px rgba(255, 165, 0, 0.1)",
+                    boxShadow:
+                      "0 8px 32px 0 rgba(31, 38, 135, 0.37), 0 0 60px rgba(255, 165, 0, 0.1)",
                   }}
                 >
                   {/* Soft Glow Effect */}
@@ -83,19 +85,22 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
                       transform: "translateX(-50%)",
                       width: "80%",
                       height: "40%",
-                      background: "radial-gradient(ellipse at center, rgba(255, 165, 0, 0.15) 0%, transparent 70%)",
+                      background:
+                        "radial-gradient(ellipse at center, rgba(255, 165, 0, 0.15) 0%, transparent 70%)",
                       borderRadius: "50%",
                       pointerEvents: "none",
+                      zIndex: 0,
                     }}
                   ></div>
 
                   {/* Image */}
                   <img
-                    className="w-full h-full object-cover relative z-[1]"
-                    src="/assets/girl.png"
+                    className="w-full h-full object-cover relative z-[1] select-none"
+                    src={girlImg} // ✅ build'da to'g'ri asset URL bo'ladi
                     alt="Student"
                     loading="eager"
-                    />
+                    draggable={false}
+                  />
                 </div>
 
                 {/* Subtle Shadow */}
@@ -107,7 +112,8 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
                     transform: "translateX(-50%)",
                     width: "90%",
                     height: 20,
-                    background: "radial-gradient(ellipse, rgba(0,0,0,0.1) 0%, transparent 70%)",
+                    background:
+                      "radial-gradient(ellipse, rgba(0,0,0,0.1) 0%, transparent 70%)",
                     borderRadius: "50%",
                     zIndex: -1,
                   }}
