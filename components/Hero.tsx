@@ -91,18 +91,11 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
 
                   {/* Image */}
                   <img
+                    className="w-full h-full object-cover relative z-[1]"
                     src="/assets/girl.png"
-                    alt="Bitiruvchi talaba sertifikat bilan"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      display: "block",
-                      position: "relative",
-                      zIndex: 1,
-                    }}
+                    alt="Student"
                     loading="eager"
-                  />
+                    />
                 </div>
 
                 {/* Subtle Shadow */}
